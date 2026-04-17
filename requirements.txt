@@ -1,0 +1,35 @@
+# ─── Document Parsing ─────────────────────────────
+PyPDF2>=3.0.0              # PDF text extraction
+python-docx>=1.1.0         # DOCX text extraction
+
+# ─── Text Processing ─────────────────────────────
+nltk>=3.8.0                # Sentence tokenization for smart chunking
+
+# ─── Embeddings ───────────────────────────────────
+sentence-transformers>=3.0.0  # Embedding model (all-MiniLM-L6-v2)
+torch>=2.0.0               # PyTorch backend (will use CUDA)
+
+# ─── Vector Database ─────────────────────────────
+chromadb>=0.5.0            # Vector store with persistent storage
+
+# ─── Keyword Search ──────────────────────────────
+rank-bm25>=0.2.2           # BM25 keyword search algorithm
+
+# ─── Re-ranking ──────────────────────────────────
+# cross-encoder uses sentence-transformers, already installed above
+
+# ─── LLM (Local) ─────────────────────────────────
+transformers>=4.40.0       # HuggingFace model loading
+accelerate>=0.30.0         # Efficient model loading + GPU offload
+bitsandbytes>=0.43.0       # 4-bit/8-bit quantization for fitting in VRAM
+
+# ─── UI ───────────────────────────────────────────
+streamlit>=1.35.0          # Web UI framework
+
+# ─── Caching / Utils ─────────────────────────────
+diskcache>=5.6.0           # Persistent disk-based cache
+hashlib-additional>=1.0.1  # For cache key hashing (optional)
+
+# ─── Kubernetes (Week 2) ─────────────────────────
+# kubectl + helm installed separately
+# docker for containerization
