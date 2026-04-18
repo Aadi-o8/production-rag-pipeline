@@ -1,14 +1,17 @@
-"""
-Central configuration for the Production RAG System.
-All paths, model names, and tunable parameters live here.
-"""
-
 from pathlib import Path
 import os
 
 # ─── Document Parsing ────────────────────────────────────────────
 SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".txt", ".md"}
 MAX_FILE_SIZE_MB = 50  # reject files larger than this
+
+# ─── Project Paths ───────────────────────────────────────────────
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data" / "documents"
+STORAGE_DIR = PROJECT_ROOT / "storage"
+CHROMA_DIR = STORAGE_DIR / "chroma"
+EMBEDDING_CACHE_DIR = STORAGE_DIR / "cache" / "embeddings"
+LLM_CACHE_DIR = STORAGE_DIR / "cache" / "llm"
 
 # ─── Chunking ────────────────────────────────────────────────────
 CHUNK_SIZE = 1000          # characters (not tokens)
