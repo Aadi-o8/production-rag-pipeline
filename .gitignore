@@ -3,7 +3,8 @@ __pycache__/
 *.pyc
 
 # Data
-data/documents/
+data/
+storage/
 
 # Env
 .env
